@@ -1,0 +1,25 @@
+{
+  "name": "konyvtar_mysql",
+  "version": "1.0.0",
+  "description": "Könyvtári kölcsönzéseket kezelő alkalmazás",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martonmucsi29/konyvtar_mysql.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/martonmucsi29/konyvtar_mysql/issues"
+  },
+  "homepage": "https://github.com/martonmucsi29/konyvtar_mysql#readme",
+  "dependencies": {
+    "express": "^5.3.0",
+    "mysql2": "^3.24.6"
+  }
+}
