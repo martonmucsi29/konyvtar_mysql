@@ -38,9 +38,17 @@ app.post('/kolcsonzesek', async (req, res) => {
     let sql = `INSERT INTO kolcsonzesek(konyvId, olvasoId) VALUES (${konyvId}, ${olvasoId});`;
     let eredmeny = await pool.query(sql);
 
-    res.json(eredmeny);
+    res.status(201).json(eredmeny);
 });
 
+app.patch('/kolcsonzesek/:id/visszahoz', async (req, res) => {
+    const id = req.params.id;
+
+    let sql = `UPDATE kolcsonzesek SET datum='2026-10-16',visszahozva='true' WHERE id=${id}`;
+    let eredmeny = await pool.query(sql);
+
+    res.status(201).json(eredmeny);
+});
 
 app.listen(PORT, () => {
     console.log(`Szerver fut: http://localhost:${3000}`);
